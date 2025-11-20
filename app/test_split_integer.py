@@ -6,12 +6,11 @@ def test_sum_of_the_parts_should_be_equal_to_value() -> None:
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
-    for i in split_integer(40, 4):
-        assert i == 10
+    assert split_integer(40, 4) == [10, 10, 10, 10]
 
 
 def test_should_return_part_equals_to_value_when_split_into_one_part() -> None:
-    assert 1 == len(split_integer(56, 1))
+    assert split_integer(56, 1) == [56]
 
 
 def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
